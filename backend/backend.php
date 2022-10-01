@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+if(isset($_SESSION['id']) && isset($_SESSION['user_name']))
+{
+
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -5,17 +13,17 @@
     <title>Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="css/font.css"/>
-    <link rel="stylesheet" href="css/font-awesome.css"/>
-    <link rel="stylesheet" href="css/normalize.css"/>
+    <link rel="stylesheet" href="../css/font.css"/>
+    <link rel="stylesheet" href="../css/font-awesome.css"/>
+    <link rel="stylesheet" href="./css/normalize.css"/>
     <!--css plugin-->
-    <link rel="stylesheet" href="css/flexslider.css"/>
-    <link rel="stylesheet" href="css/jquery.nouislider.css"/>
-    <link rel="stylesheet" href="css/jquery.popupcommon.css"/>
+    <link rel="stylesheet" href="../css/flexslider.css"/>
+    <link rel="stylesheet" href="../css/jquery.nouislider.css"/>
+    <link rel="stylesheet" href="../css/jquery.popupcommon.css"/>
 
-    <link rel="stylesheet" href="css/style.css"/>
-    <link rel="stylesheet" href="css/style-dark.css">
-    <link rel="stylesheet" href="css/style-gray.css">
+    <link rel="stylesheet" href="../css/style.css"/>
+    <link rel="stylesheet" href="../css/style-dark.css">
+    <link rel="stylesheet" href="../css/style-gray.css">
     <!--[if IE 9]>
     <link rel="stylesheet" href="css/ie9.css"/>
     <![endif]-->
@@ -23,14 +31,15 @@
     <link rel="stylesheet" href="css/ie8.css"/>
     <![endif]-->
 
-    <link rel="stylesheet" href="css/res-menu.css"/>
-    <link rel="stylesheet" href="css/responsive.css"/>
+    <link rel="stylesheet" href="../css/res-menu.css"/>
+    <link rel="stylesheet" href="../css/responsive.css"/>
     <!--[if lte IE 8]>
         <script type="text/javascript" src="js/html5.js"></script>
     <![endif]-->
 
 </head>
 <body class="gray"><!--<div class="alert_w_p_u"></div>-->
+
 <div class="container-page">
     <div class="mp-pusher" id="mp-pusher">
         <header class="mod-header">
@@ -40,10 +49,10 @@
                         <div class="header-content clearfix">
                             <h1 id="logo" class="rs">
                                 <a href="index.html">
-                                    <img src="images/logo.png" alt="$SITE_NAME"/>
+                                    <img src="../images/logo.png" alt="$SITE_NAME"/>
                                 </a>
                             </h1>
-                            <a id="sys_head_login" class="btn btn-green type-login btn-login" href="#">Login</a>
+                            <a  class="btn btn-green type-login btn-login" href="logout.php">Logout</a>
                             <nav class="main-nav">
                                 <ul id="main-menu" class="nav nav-horizontal clearfix">
                                     <li class="active">
@@ -112,7 +121,7 @@
                                         </div>
                                     </div>
                                     <div class="right-create-acc">
-                                        <img class="account" src="images/reg-account.png" alt="Couponday.com">
+                                        <img class="account" src="../images/reg-account.png" alt="Couponday.com">
                                         <p class="lbl-dung-lo rs">Not a member? Don’t worry</p>
                                         <a id="sys_link_reg_panel" href="register.html" class="btn-flat yellow btn-submit-reg">Create an account</a>
                                         <div id="sys_warning_sms" class="warning-sms" data-warning-txt="No spam guarantee,No disturb,Promotion News"></div>
@@ -212,18 +221,13 @@
             <div class="mod-head-slide">
                 <div class="grid_frame">
                     <div class="wrap-slide">
-                        <p class="ta-c"><img src="images/ajax-loader.gif" alt="loading"></p>
+                        <p class="ta-c"><img src="../images/ajax-loader.gif" alt="loading"></p>
                         <div id="sys_head_slide" class="head-slide flexslider">
                             <ul class="slides">
                                 <li>
-                                    <img src="images/ex/01_banner.jpg" alt=""/>
+                                    <img src="../images/ex/01_bannerBE.png" alt=""/>
                                 </li>
-                                <li>
-                                    <img src="images/ex/02_banner.jpg" alt=""/>
-                                </li>
-                                <li>
-                                    <img src="images/ex/03_banner.jpg" alt=""/>
-                                </li>
+                                
                             </ul>
                         </div>
                     </div>
@@ -289,7 +293,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_01.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_01.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$2.00 Off</div>
@@ -305,7 +309,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_02.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_02.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">Save $1.50 on two</div>
@@ -320,7 +324,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_03.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_03.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$5.00 Off</div>
@@ -335,7 +339,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_04.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_04.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$7.00 Off</div>
@@ -361,7 +365,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_02.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_02.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$12.00 Off</div>
@@ -377,7 +381,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_03.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_03.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$17.50 off</div>
@@ -409,7 +413,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_04.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_04.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$7.00 Off</div>
@@ -439,7 +443,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_01.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_01.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$11.50 off</div>
@@ -469,7 +473,7 @@
                                 <div class="img-thumb-center">
                                     <div class="wrap-img-thumb">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_02.jpg" alt="$COUPON_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_02.jpg" alt="$COUPON_TITLE"></a>
                                     </div>
                                 </div>
                                 <div class="coupon-price">$4.5 Off</div>
@@ -521,7 +525,27 @@
                                 <div class="brand-logo">
                                     <div class="wrap-img-logo">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end: .brand-item -->
+                        <div class="brand-item grid_4">
+                            <div class="brand-content">
+                                <div class="brand-logo">
+                                    <div class="wrap-img-logo">
+                                        <span class="ver_hold"></span>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!--end: .brand-item -->
+                        <div class="brand-item grid_4">
+                            <div class="brand-content">
+                                <div class="brand-logo">
+                                    <div class="wrap-img-logo">
+                                        <span class="ver_hold"></span>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
                                     </div>
                                 </div>
                             </div>
@@ -541,27 +565,7 @@
                                 <div class="brand-logo">
                                     <div class="wrap-img-logo">
                                         <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--end: .brand-item -->
-                        <div class="brand-item grid_4">
-                            <div class="brand-content">
-                                <div class="brand-logo">
-                                    <div class="wrap-img-logo">
-                                        <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div><!--end: .brand-item -->
-                        <div class="brand-item grid_4">
-                            <div class="brand-content">
-                                <div class="brand-logo">
-                                    <div class="wrap-img-logo">
-                                        <span class="ver_hold"></span>
-                                        <a href="#" class="ver_container"><img src="images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
+                                        <a href="#" class="ver_container"><img src="../images/ex/01_07.jpg" alt="$BRAND_TITLE"></a>
                                     </div>
                                 </div>
                             </div>
@@ -576,7 +580,7 @@
                     <div class="container_grid clearfix">
                         <div class="grid_3">
                             <div class="company-info">
-                                <img src="images/logo-gray.png" alt="CouponDay"/>
+                                <img src="../images/logo-gray.png" alt="CouponDay"/>
                                 <p class="rs">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud</p>
                                 <p class="rs">
                                     1200 Balh Blah Avenue <br />
@@ -623,13 +627,13 @@
                                 <div class="block-content">
                                     <div class="entry-item flex">
                                         <a class="thumb-left" href="#">
-                                            <img src="images/ex/04-15.jpg" alt="$TITLE"/>
+                                            <img src="../images/ex/04-15.jpg" alt="$TITLE"/>
                                         </a>
                                         <div class="flex-body"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing eli</a></div>
                                     </div>
                                     <div class="entry-item flex">
                                         <a class="thumb-left" href="#">
-                                            <img src="images/ex/04-16.jpg" alt="$TITLE"/>
+                                            <img src="../images/ex/04-16.jpg" alt="$TITLE"/>
                                         </a>
                                         <div class="flex-body"><a href="#">Ut wisi enim ad minim veniam, quis nostrud</a></div>
                                     </div>
@@ -659,25 +663,34 @@
     </div>
 </div>
 
-<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
-<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
-<script type="text/javascript" src="js/jquery.nouislider.js"></script>
-<script type="text/javascript" src="js/jquery.popupcommon.js"></script>
-<script type="text/javascript" src="js/html5lightbox.js"></script>
-<!--//js for responsive menu-->
-<script type="text/javascript" src="js/modernizr.custom.js"></script>
-<script type="text/javascript" src="js/classie.js"></script>
-<script type="text/javascript" src="js/mlpushmenu.js"></script>
+<script type="text/javascript" src="../js/jquery-1.10.2.js"></script>
+<script type="text/javascript" src="../js/jquery.flexslider-min.js"></script>
+<script type="text/javascript" src="../js/jquery.nouislider.js"></script>
+<script type="text/javascript" src="../js/jquery.popupcommon.js"></script>
+<script type="text/javascript" src="../js/html5lightbox.js"></script>
 
-<script type="text/javascript" src="js/script.js"></script>
+<!--//js for responsive menu-->
+<script type="text/javascript" src="../js/modernizr.custom.js"></script>
+<script type="text/javascript" src="../js/classie.js"></script>
+<script type="text/javascript" src="../js/mlpushmenu.js"></script>
+
+<script type="text/javascript" src="../js/script.js"></script>
 
 <!--[if lte IE 9]>
-<script type="text/javascript" src="js/jquery.placeholder.js"></script>
-<script type="text/javascript" src="js/create.placeholder.js"></script>
-<![endif]-->
-<!--[if lte IE 8]>
-<script type="text/javascript" src="js/ie8.js"></script>
+<script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="../js/create.placeholder.js"></script>
 <![endif]-->
 
+<!--[if lte IE 8]>
+<script type="text/javascript" src="../js/ie8.js"></script>
+<![endif]-->
 </body>
+
 </html>
+
+<?php
+}else{
+    header("Location: login.php");
+    exit();
+    
+}
